@@ -2,30 +2,34 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="bg-gray-400 h-20">
+    <div className="bg-gray-300 h-20 relative">
 
-      <div className="h-full w-96  justify-start items-end flex float-right">
+      <div className="h-fit w-96 absolute bottom-0 right-0">
       <ul className="w-full">
         <button>
-          <li className="inline-block py-2 px-5 mx-4 mb-2 border border-1px rounded-full" >link1</li>
-
-
+          <a href="/rent">
+          <li className="inline-block py-2 px-5 mx-4 mb-2 border border-1px rounded-full hover:bg-gray-400" >
+            Rental page
+            </li>
+          </a>
+          
         </button>
-        <li className="inline-block py-2 px-5 mx-4 mb-2 border border-1px rounded-full">link2</li>
-        <li className="inline-block py-2 px-5 mx-4 mb-2 border border-1px rounded-full">link3</li>
+        <button>
+          <li className="inline-block py-2 px-5 mx-4 mb-2 border border-1px rounded-full hover:bg-gray-400">link2</li>
+        </button>
+        <button>
+          <li className="inline-block py-2 px-5 mx-4 mb-2 border border-1px rounded-full hover:bg-gray-400">link3</li>
+        </button>
       </ul>
-      
       </div>
+
+
+      <div className="w-fit absolute bottom-0 left-0 mb-2 ml-2 text-2xl font-bold">
         <NavLink to="/">
-          <h1>hello</h1>
+          <h1>ACamera Storage Rental</h1>
         </NavLink>
-
-        <NavLink  to="/create">
-          <div className="bg-green-300 text-white inline-flex justify-end items-start float-right">
-            Create Employee
-
-          </div>
-        </NavLink>
+      </div>
+        
     </div>
   );
 }

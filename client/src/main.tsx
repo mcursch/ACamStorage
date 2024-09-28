@@ -5,6 +5,7 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import Rental from "./components/Rental";
+import Calendar from "./components/Calendar"
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <RecordList />,
+        element: <Calendar />,
       },
     ],
   },
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/rent/:id",
+    path: "/rent",
     element: <App />,
     children: [
       {
-        path: "/rent/:id",
+        path: "/rent",
         element: <Rental />,
       },
     ],
